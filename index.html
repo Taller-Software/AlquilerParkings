@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plazas de Parking en Alquiler - Viladecans Barrio Salas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Plazas de Garaje Cubiertas en Alquiler</h1>
+            <h2>Viladecans Barrio Salas</h2>
+            <a href="#contacto" class="cta-button">Reservar ahora</a>
+        </div>
+    </header>
+
+    <!-- Características principales -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-box">
+                <i class="fas fa-car"></i>
+                <h3>Parking Cubierto</h3>
+                <p>Planta -2 con Puerta Automática</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-key"></i>
+                <h3>Acceso 24h</h3>
+                <p>Mando a Distancia + Llave</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-ruler"></i>
+                <h3>Acceso y Maniobrabilidad</h3>
+                <p>Amplio y bueno</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descripción detallada -->
+    <section class="description">
+        <div class="container">
+            <h2>Descripción</h2>
+            <p>Se alquilan plazas de garaje cubiertas, en planta -2 con puerta automática con mando a distancia con opción a apertura manual con llave. El acceso es muy bueno y la maniobrabilidad es bastante aceptable. No hay ascensor. Acceso 24h.</p>
+            <p>Son dos plazas contiguas, disponibles por separado o juntas. Medidas aproximadas: las dos juntas 4,35 m de ancho × 4,10 m de fondo (≈ 2,175 m de ancho × 4,10 m por plaza).</p>
+        </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Galería de Fotos</h2>
+            <div class="gallery-grid">
+                <img src="img/Parking (1).jpg" alt="Vista del parking 1" onclick="openModal(this.src)">
+                <img src="img/Parking (2).jpg" alt="Vista del parking 2" onclick="openModal(this.src)">
+                <img src="img/Parking (3).jpg" alt="Vista del parking 3" onclick="openModal(this.src)">
+                <img src="img/Parking (4).jpg" alt="Vista del parking 4" onclick="openModal(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- Precios -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Precios:</h2>
+            <div class="price-boxes">
+                <div class="price-box">
+                    <h3>Plaza Individual</h3>
+                    <p class="price">65€/mes</p>
+                    <!-- <ul>
+                        <li>Mando a distancia</li>
+                        <li>Acceso 24h</li>
+                        <li>Plaza individual</li>
+                    </ul> -->
+                    <a href="#contacto" class="cta-button">Reservar Plaza</a>
+                </div>
+                <div class="price-box featured">
+                    <h3>Ambas Plazas</h3>
+                    <p class="price">110€/mes</p>
+                    <!-- <ul>
+                        <li>Mando a distancia</li>
+                        <li>Acceso 24h</li>
+                        <li>Dos plazas contiguas</li>
+                    </ul> -->
+                    <a href="#contacto" class="cta-button">Reservar Plazas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Condiciones -->
+    <section class="conditions-section">
+        <div class="container">
+            <h2>Condiciones y Requisitos:</h2>
+            <div class="conditions-list">
+                <ul>
+                    <li><i class="fas fa-file-contract"></i> Contrato de alquiler</li>
+                    <li><i class="fas fa-key"></i> Fianza del mando: 45€ (retornable)</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Pago mensual adelantado</li>
+                    <li><i class="fas fa-id-card"></i> Identificación requerida (DNI/NIE)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehículos compatibles -->
+    <section class="vehicles">
+        <div class="container">
+            <h2>Vehículos Compatibles:</h2>
+            <div class="vehicle-types">
+                <div class="vehicle-type" onclick="openVehicleModal('urbanCars')">
+                    <i class="fas fa-car"></i>
+                    <h3>Coches Urbanos</h3>
+                    <p>Ideal para coches pequeños y medianos como Fiat 500, VW Up, Toyota Yaris, etc.</p>
+                </div>
+                <div class="vehicle-type">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Motos y Scooters</h3>
+                    <p>Perfecta para todo tipo de motos y scooters (gasolina o eléctricos)</p>
+                </div>
+                <div class="vehicle-type">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Microcoches</h3>
+                    <p>Apta para Microvehículos y Cuadriciclos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para vehículos urbanos -->
+    <div id="vehicleModal" class="modal">
+        <div class="modal-content vehicle-list-modal">
+            <span class="close" onclick="closeVehicleModal()">&times;</span>
+            <h2>Coches Urbanos Compatibles</h2>
+            <div class="vehicle-list">
+                <ul>
+                    <li>Aixam City (microcoche)</li>
+                    <li>Aixam Crossover</li>
+                    <li>Citroën C1</li>
+                    <li>Citroën C3</li>
+                    <li>Dacia Spring</li>
+                    <li>Fiat 500</li>
+                    <li>Fiat Panda</li>
+                    <li>Honda Jazz</li>
+                    <li>Hyundai i10</li>
+                    <li>Kia Picanto</li>
+                    <li>Ligier JS50</li>
+                    <li>Ligier JS60</li>
+                    <li>Mazda 2</li>
+                    <li>Microcar M.Go</li>
+                    <li>Mini 3 puertas</li>
+                    <li>Mitsubishi Space Star (Mirage)</li>
+                    <li>Nissan Micra</li>
+                    <li>Opel Corsa</li>
+                    <li>Peugeot 108</li>
+                    <li>Peugeot 208</li>
+                    <li>Renault Clio</li>
+                    <li>Renault Twingo</li>
+                    <li>Renault Twingo E-Tech</li>
+                    <li>Seat Ibiza</li>
+                    <li>Skoda Fabia</li>
+                    <li>Smart Forfour</li>
+                    <li>Smart Fortwo</li>
+                    <li>Suzuki Ignis</li>
+                    <li>Suzuki Swift</li>
+                    <li>Toyota Aygo X</li>
+                    <li>Toyota Yaris</li>
+                    <li>VW Polo</li>
+                    <li>VW Up</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ubicación -->
+    <section class="location">
+        <div class="container">
+            <h2>Ubicación:</h2>
+            <p>Los parkings están ubicados en el Barrio Salas de Viladecans, próximo al Instituto de Sales y Escuela Pau Casals. Cerca del Casal Barri de Sales y Casal d’avis Barri de Sales en Plaça de la Diversitat</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2997.5276853080987!2d2.0247491776800753!3d41.31377597131681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE4JzQ5LjYiTiAywrAwMSczMy4wIkU!5e0!3m2!1ses!2ses!4v1695828058045!5m2!1ses!2ses" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Solicitar Información:</h2><br>
+            <form id="contactForm" onsubmit="return sendWhatsApp(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha">Fecha de inicio:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="plaza">Plaza deseada:</label>
+                    <select id="plaza" name="plaza" required>
+                        <option value="Plaza 17">Plaza 17 (pared)</option>
+                        <option value="Plaza 16">Plaza 16 (columna)</option>
+                        <option value="Ambas">Ambas plazas</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="vehiculo">Vehículo:</label>
+                    <select id="vehiculo" name="vehiculo" required>
+                        <option value="Otro similar" selected>Otro similar</option>
+                        <!-- El resto de opciones se cargarán mediante JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consulta">Dudas y consultas (máx. 300 caracteres):</label>
+                    <textarea id="consulta" name="consulta" maxlength="300" rows="4"></textarea>
+                    <div class="char-counter"><span id="charCount">0</span>/300</div>
+                </div>
+                
+                <button type="submit" class="cta-button">Enviar Consulta por WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="address">Carrer de Rafael Casanova, 57, 08840 Viladecans, Barcelona</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
