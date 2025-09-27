@@ -134,6 +134,25 @@ body {
     font-size: 1.2em;
 }
 
+.centered-image {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.centered-image img {
+    width: auto;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.centered-image img:hover {
+    transform: scale(1.02);
+}
+
 /* Galería */
 .gallery {
     padding: 60px 0;
