@@ -88,9 +88,9 @@ function sendWhatsApp(event) {
     mensaje += `La opción de plaza que me interesa es *${plaza}* y `;
     mensaje += `el vehículo que aparcaría sería *${vehiculo}*.`;
     if (consulta) {
-        mensaje += `\n*Tengo las siguientes dudas o consultas:*\n${consulta}`;
+        mensaje += `\n\n*Tengo las siguientes dudas o consultas:*\n${consulta}`;
     }
-    mensaje += `\n\nQuedo a la espera de tu respuesta. \n¡Gracias!`;
+    mensaje += `\n\nQuedo a la espera de tu respuesta. \n\n¡Gracias!`;
 
     // Codificar el mensaje para la URL
     const mensajeCodificado = encodeURIComponent(mensaje);
