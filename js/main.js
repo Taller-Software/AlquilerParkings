@@ -37,7 +37,7 @@ const vehiculos = [
     'Toyota Yaris',
     'VW Polo',
     'VW Up',
-    'scooter'
+    'Scooter'
 ].sort();
 
 // Cargar vehículos en el select
@@ -82,25 +82,16 @@ function sendWhatsApp(event) {
     const fechaFormateada = new Date(fecha).toLocaleDateString('es-ES');
     
     // Construir el mensaje
-    // let mensaje = `Hola Daniel, me interesa el parking.\n\n`;
-    // mensaje += `*Me llamo:* ${nombre}\n`;
-    // mensaje += `*Me gustaría empezar el:* ${fechaFormateada}\n`;
-    // mensaje += `*Plaza interesada:* ${plaza}\n`;
-    // mensaje += `+Vehículo:+ ${vehiculo}\n`;
-    // if (consulta) {
-    //     mensaje += `\n*Tengo las siguientes dudas o consultas:*\n${consulta}`;
-    // }
-
-    // Construir el mensaje
-    let mensaje = `¡Hola Daniel! 👋 Me interesa el parking.\n\n`;
-    mensaje += `*Me llamo:* ${nombre} 😊\n`;
-    mensaje += `*Me gustaría empezar el:* ${fechaFormateada} 📅\n`;
-    mensaje += `*Plaza interesada:* ${plaza} 🚗\n`;
-    mensaje += `*Vehículo:* ${vehiculo} 🔑\n`;
+    let mensaje = `¡Hola Daniel! Me interesa el parking.\n\n`;
+    mensaje += `Me llamo: ${nombre}\n`;
+    mensaje += `Me gustaría empezar el: ${fechaFormateada}\n`;
+    mensaje += `Plaza interesada: ${plaza}\n`;
+    mensaje += `Vehículo: ${vehiculo}\n`;
     if (consulta) {
-        mensaje += `\n*Tengo las siguientes dudas o consultas:* 💭\n${consulta}`;
+        mensaje += `\n*Tengo las siguientes dudas o consultas:*\n${consulta}`;
     }
-    
+    mensaje += `Quedo a la espera de tu respuesta. ¡Gracias!`;
+
     // Codificar el mensaje para la URL
     const mensajeCodificado = encodeURIComponent(mensaje);
     

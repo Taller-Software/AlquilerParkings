@@ -64,14 +64,31 @@ body {
     color: var(--white);
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
     border: none;
     cursor: pointer;
     font-size: 1.1em;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceButton 2s infinite;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.2);
 }
 
 .cta-button:hover {
     background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+@keyframes bounceButton {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
 }
 
 /* Características */
@@ -105,10 +122,16 @@ body {
     padding: 60px 0;
 }
 
-.description h2 {
+.description h1 {
     color: var(--primary-color);
     margin-bottom: 30px;
     text-align: center;
+}
+
+.description blockquote {
+    padding-left: 15px;
+    margin: 20px 0;
+    font-size: 1.2em;
 }
 
 /* Galería */
@@ -117,7 +140,7 @@ body {
     background-color: var(--light-gray);
 }
 
-.gallery h2 {
+.gallery h1 {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -178,6 +201,11 @@ body {
     padding: 60px 0;
 }
 
+.pricing h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .price-boxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -195,7 +223,13 @@ body {
 
 .price-box.featured {
     border: 2px solid var(--secondary-color);
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+}
+
+.price-box h2 {
+    color: var(--primary-color);
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .price {
@@ -217,6 +251,11 @@ body {
 .vehicles {
     padding: 60px 0;
     background-color: var(--light-gray);
+}
+
+.vehicles h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .vehicle-types {
@@ -300,6 +339,11 @@ body {
     padding: 60px 0;
 }
 
+.location h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .map-container {
     margin-top: 30px;
     border-radius: 10px;
@@ -312,6 +356,11 @@ body {
     background-color: var(--light-gray);
 }
 
+.contact h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -320,6 +369,7 @@ body {
     display: block;
     margin-bottom: 5px;
     color: var(--primary-color);
+    font-weight: bold;
 }
 
 .form-group input,
@@ -338,10 +388,30 @@ body {
     color: #666;
 }
 
+/* Centrado del botón de envío */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .form-group {
+    width: 100%;
+}
+
+.contact .cta-button {
+    margin-top: 20px;
+}
+
 /* Conditions Section */
 .conditions-section {
     padding: 60px 0;
     background-color: var(--white);
+}
+
+.conditions-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .conditions-list ul {
