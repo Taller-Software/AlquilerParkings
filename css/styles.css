@@ -269,7 +269,7 @@ body {
 /* Vehículos compatibles */
 .vehicles {
     padding: 60px 0;
-    background-color: var(--light-gray);
+    background-color: var(--white);
 }
 
 .vehicles h1 {
@@ -356,6 +356,7 @@ body {
 /* Ubicación */
 .location {
     padding: 60px 0;
+    background-color: var(--light-gray);
 }
 
 .location h1 {
@@ -372,7 +373,7 @@ body {
 /* Formulario de contacto */
 .contact {
     padding: 60px 0;
-    background-color: var(--light-gray);
+    background-color: var(--white);
 }
 
 .contact h1 {
@@ -425,7 +426,7 @@ body {
 /* Conditions Section */
 .conditions-section {
     padding: 60px 0;
-    background-color: var(--white);
+    background-color: var(--light-gray);
 }
 
 .conditions-section h1 {
@@ -442,7 +443,7 @@ body {
 .conditions-list ul li {
     margin: 20px 0;
     padding: 15px;
-    background-color: var(--light-gray);
+    background-color: var(--white);
     border-radius: 8px;
     display: flex;
     align-items: center;
